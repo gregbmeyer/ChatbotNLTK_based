@@ -13,7 +13,7 @@ nltk.download('wordnet') # first-time use only
 sent_tokens = nltk.sent_tokenize(raw)# converts to list of sentences 
 word_tokens = nltk.word_tokenize(raw)# converts to list of words
 
-GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
+GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "wazzup","hey",)
 GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello", "I am glad! You are talking to me"]
 similarityCutOff=0.3
 
