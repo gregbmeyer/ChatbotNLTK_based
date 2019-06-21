@@ -42,7 +42,7 @@ def response(user_response):
     idx1=vals.argsort()[0][-3]
     idx2=vals.argsort()[0][-4]
     #however, we have to step back one more from the indices of the top matches to find the proper response to the match
-    idList=[idx-1,idx1-1,idx2-1]
+    idList=[idx,idx1,idx2]
     #and we choose randomly from the top 3 matches to respond with
     idT=random.choice(idList)
     #we have to get our response similarity list into a form to sort 
