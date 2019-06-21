@@ -32,7 +32,6 @@ def greeting(sentence):
             return random.choice(GREETING_RESPONSES)
 
 def response(user_response):
-    robo_response=''
     sent_tokens.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
     tfidf = TfidfVec.fit_transform(sent_tokens)
@@ -59,7 +58,7 @@ def response(user_response):
         return robo_response
     else:
         #this is how we reference the matched response
-        robo_response = sent_tokens[idT]
+        robo_response = sent_tokens[idList[0]]
         return robo_response
 
 flag=True
