@@ -1,5 +1,4 @@
 import nltk
-import numpy as np
 import random
 import string
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -58,7 +57,7 @@ def response(user_response):
         return robo_response
     else:
         #this is how we reference the matched response
-        robo_response = sent_tokens[idList[0]]
+        robo_response = sent_tokens[idT]
         return robo_response
 
 flag=True
@@ -71,7 +70,7 @@ while(flag==True):
             flag=False
             print("ChatBot: You are welcome..")
         else:
-            if(greeting(user_response)!=None):
+            if(user_response in GREETING_RESPONSE):
                 print("ChatBot: "+greeting(user_response))
             else:
                 print("ChatBot: ",end="")
